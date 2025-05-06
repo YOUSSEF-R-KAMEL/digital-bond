@@ -1,0 +1,18 @@
+<section class="reviews text-center" id="reviews">
+  <div class="container">
+    <h2 class="head">Rev<span>iews</span></h2>
+      <owl-carousel-o [options]="customOptions" class="position-relative">
+        @for (item of reviews; track $index) {
+          <ng-container class="text-center">
+            <ng-template carouselSlide class="text-center">
+              <img [src]="'assets/images/reviews/' + item.img" [alt]="item.name" [title]="item.name"
+              class="rounded-circle d-inline-block mb-2" data-aos="zoom-in">
+              <h3 class="main-color" data-aos="zoom-in" data-aos-delay="100">{{item.name}}</h3>
+              <span class="job fst-italic" data-aos="zoom-in" data-aos-delay="200">{{item.job}}</span>
+              <p class="w-50 m-auto mt-4 fs-5" data-aos="zoom-in" data-aos-delay="300">{{item.content}}</p>
+            </ng-template>
+          </ng-container>
+        }
+      </owl-carousel-o>
+  </div>
+</section>

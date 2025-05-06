@@ -1,0 +1,92 @@
+$main-color: #ab0202;
+$second-color: #ff302a;
+$dark-color: #1e1e2a;
+
+.main-color {
+  color: $main-color;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.head {
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+  width: fit-content;
+  margin: 1rem auto 3rem;
+  position: relative;
+  &::after {
+    content: "";
+    transition: width 0.5s;
+    width: 60px;
+    height: 3px;
+    border-radius: 6px;
+    background-color: $main-color;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+  span {
+    color: $main-color;
+  }
+}
+
+.an-r {
+  animation: rotate-shape 2s linear infinite;
+}
+
+.an-l {
+  animation: scale-shape 2s ease-in-out infinite;
+}
+
+.an-l-2 {
+  animation: scale-shape-2 2s ease-in-out infinite;
+}
+
+.an-k {
+  animation: skew-shape 2s linear infinite;
+}
+
+@keyframes rotate-shape {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scale-shape {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+@keyframes scale-shape-2 {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+@keyframes skew-shape {
+  0%, 100% {
+    transform: skew(0);
+  }
+  25% {
+    transform: skew(30deg);
+  }
+  50% {
+    transform: skew(0);
+  }
+  75% {
+    transform: skew(-45deg);
+  }
+}

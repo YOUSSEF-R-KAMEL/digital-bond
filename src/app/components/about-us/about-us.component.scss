@@ -1,0 +1,18 @@
+img {
+  object-fit: contain;
+}
+
+.play-img {
+  right: 20px;
+  top: 25px;
+}
+
+.circles-img {
+  bottom: -5px;
+}
+
+@media (max-width: 600px) {
+  .play-img {
+    display: none;
+  }
+}

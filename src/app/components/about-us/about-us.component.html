@@ -1,0 +1,23 @@
+<section class="about-us" id="about-us">
+  <div class="container position-relative">
+    <h2 class="head">About <span>Us</span></h2>
+    <img src="assets/images/vectors/play.svg" alt="play" class="an-r play-img position-absolute" />
+    <div class="row">
+      @for (item of boxes; let index = $index; track $index) {
+        <div
+        class="col-12 text-center mb-5"
+        [ngClass]="{
+          'col-md-12': index == 0,
+          'col-md-6': index != 0
+        }">
+          <div class="image-container">
+            <img [src]="'assets/images/vectors/' + item.img" class="mb-2" width="350px" height="200px" data-aos="zoom-in">
+          </div>
+          <h3 class="main-color" data-aos="zoom-in" data-aos-delay="100">{{item.title}}</h3>
+          <p class="w-75 m-auto" data-aos="zoom-in" data-aos-delay="200">{{item.content}}</p>
+        </div>
+      }
+    </div>
+    <img src="assets/images/vectors/circles.svg" alt="circles" class="an-r circles-img position-absolute" />
+  </div>
+</section>

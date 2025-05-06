@@ -1,0 +1,40 @@
+<nav class="py-3" id="home">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="image-container">
+        <img src="assets/images/logo.webp" alt="logo" class="w-75">
+      </div>
+      <div class="mobile-container">
+        <button class="toggle-btn" (click)="toggleMenu()">
+          <i class="fas" [ngClass]="isMenuOpen ? 'fa-xmark main-color' : 'fa-bars'"></i>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div class="position-relative">
+          <ul
+            class="dropdown-menu d-flex flex-column position-absolute rounded"
+            [class.show]="isMenuOpen">
+            @for (item of menuList; track $index) {
+              <a [href]="item.link" (click)="closeMenu()">
+                <li>
+                  <i class="fas me-2" [class]="item.icon"></i> {{item.text}}
+                </li>
+              </a>
+            }
+
+          </ul>
+        </div>
+      </div>
+      <!-- desktop  -->
+        <ul class="desktop m-0">
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#about-us">About us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+        <div class="contact-btn">
+          <button><a href="#contact-us">Contact us</a></button>
+        </div>
+    </div>
+  </div>
+</nav>

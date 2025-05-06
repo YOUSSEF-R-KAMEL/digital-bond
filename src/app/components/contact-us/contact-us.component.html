@@ -1,0 +1,37 @@
+<section class="contact-us" id="contact-us">
+  <div class="container">
+    <h2 class="head">Contact <span>Us</span></h2>
+    <div class="row">
+      <div class="col-12 col-md-6 mb-5" data-aos="zoom-in">
+        <h3 class="main-color">Get In Touch</h3>
+        <p>Have a project in mind or questions about our services? Iam here to help.</p>
+        <p>
+          <i class="fas fa-envelope text-blue-500"></i> &nbsp; se.youssefrafat&#64;gmail.com
+        </p>
+        <p>
+          <i class="fas fa-phone text-blue-500"></i> &nbsp; +20 1278004938
+        </p>
+        <h3 class="main-color" style="margin-top: 5rem;">Collaboration</h3>
+        <p>Interested in working together? We welcome partnership opportunities and are open to discussing your Angular project needs.</p>
+        <img _ngcontent-ng-c4190182558="" src="assets/images/vectors/line.svg" alt="line" class="an-k line-img">
+      </div>
+      <div class="col-12 col-md-6" >
+        <form [formGroup]="contactForm">
+          <div data-aos="zoom-in" data-aos-delay="100">
+            <label for="name">Name</label>
+            <input type="text" id="name" formControlName="name" class="form-control" placeholder="ex. youssef raafat">
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="200">
+            <label for="email">Email</label>
+            <input type="text" id="email" formControlName="email" class="form-control" placeholder="ex. se.youssefrafat@gmail.com">
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="300">
+            <label for="message">Message</label>
+            <textarea id="message" formControlName="message" class="form-control" placeholder="ex. let's work together"></textarea>
+          </div>
+          <button type="submit" (click)="onSubmit()" data-aos="zoom-in" data-aos-delay="400">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

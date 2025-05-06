@@ -1,0 +1,86 @@
+@use "../../../../public/assets/_sass/abstracts/variables" as *;
+
+nav {
+  // desktop menu
+  .desktop {
+    li {
+      display: inline-block;
+      margin-right: 1.5rem;
+      a {
+        transition: .2s;
+        font-size: 1.1rem;
+        &:hover,
+        &.active {
+          color: $main-color;
+        }
+      }
+    }
+  }
+  .contact-btn button {
+    width: 157px;
+    height: 44px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 6px;
+    transition: .3s;
+    font-weight: 600;
+    &:hover  {
+      background-color: #fff;
+      a {
+        color: #000;
+      }
+    }
+  }
+}
+
+.mobile-container {
+  display: none;
+}
+
+.dropdown-menu {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  right: 20px;
+  background-color: #333;
+  transform: translateY(-10px);
+  width: 200px;
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  li {
+    transition: .3s;
+    padding: 8px 20px;
+
+    &:hover {
+      background-color: $main-color;
+      padding-left: 26px;
+    }
+  }
+}
+
+.toggle-btn {
+  background: none;
+  outline: none;
+  border: none;
+  color: #fff;
+  i {
+    font-size: 2rem;
+    transition: .3s;
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .desktop, .contact-btn {
+    display: none;
+  }
+
+  .mobile-container  {
+    display: inline;
+  }
+}

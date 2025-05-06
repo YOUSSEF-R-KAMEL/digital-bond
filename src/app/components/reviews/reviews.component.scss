@@ -1,0 +1,31 @@
+@use "../../../../public/assets/_sass/abstracts/variables" as *;
+
+.reviews {
+  img {
+    width: 120px !important;
+    box-shadow: 0 0 80px rgba(171, 2, 2, 0.3)
+  }
+
+  .job {
+    color: #ddd;
+  }
+}
+
+::ng-deep .owl-nav div {
+  position: absolute;
+  top: 50%;
+  background: none !important;
+  i {
+    font-size: 35px !important;
+    transition: .3s;
+    &:hover {
+      color: $main-color;
+    }
+  }
+  &.owl-prev {
+    right: 15px;
+  }
+  &.owl-next {
+    left: 15px;
+  }
+}
