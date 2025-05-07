@@ -1,4 +1,4 @@
-# 🔗 Digital Bond Task
+# 🔗 Digital Bond
 
 ### 🌟 Interactive Web Experience with Dynamic Visual Effects
 
