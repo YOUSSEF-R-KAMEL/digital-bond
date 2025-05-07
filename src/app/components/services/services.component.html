@@ -1,7 +1,17 @@
-<section class="services" id="services">
+<section class="services text-center overflow-hidden" id="services">
   <div class="container">
-    <h2 class="head">Serv <span>ices</span></h2>
+    <h2 class="head">Serv<span>ices</span></h2>
     <div class="row">
+      @for (item of servicesList; let index = $index; track $index) {
+        <div class="col-12 col-sm-6 col-lg-4 mb-4" [attr.data-aos-delay]="index * 50" [attr.data-aos]="item.amimatioType">
+          <div class="box rounded-4 p-4 pb-1 h-100"
+          [ngClass]="{ 'last-box': index === servicesList.length - 1 }"
+          >
+            <img [src]="'assets/images/services/' + item.img " [alt]="item.text">
+            <p class="w-100 fs-5 fw-bold main-color">{{item.text}}</p>
+          </div>
+        </div>
+      }
     </div>
   </div>
 </section>

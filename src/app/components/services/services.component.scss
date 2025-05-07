@@ -1,0 +1,63 @@
+@use "../../../../public/assets/_sass/abstracts/variables" as *;
+
+.box {
+
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    #23153c 0%,
+    #111122 5%,
+    #111122 60%,
+    #23153c 95%
+  );
+
+
+  border: solid 5px transparent;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #da140d, #ab0202 99%, transparent);
+
+  background:
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+
+  background-position: center center;
+
+  animation: bg-spin 3s linear infinite;
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+
+  &:hover {
+    animation-play-state: paused;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .last-box {
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .box {
+    width: 75%;
+    margin: auto;
+  }
+}
+
+// ----------------
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+

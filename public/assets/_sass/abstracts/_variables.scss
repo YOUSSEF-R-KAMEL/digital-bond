@@ -1,6 +1,6 @@
 $main-color: #ab0202;
 $second-color: #ff302a;
-$dark-color: #1e1e2a;
+$dark-color: #23153c;
 
 .main-color {
   color: $main-color;
@@ -15,12 +15,19 @@ $dark-color: #1e1e2a;
   font-size: 3rem;
   text-align: center;
   width: fit-content;
-  margin: 1rem auto 3rem;
+  margin: 3rem auto;
   position: relative;
+  transition: .3s;
+  &:hover {
+    color: $main-color;
+    span {
+      color: #fff;
+    }
+  }
   &::after {
     content: "";
     transition: width 0.5s;
-    width: 60px;
+    width: 50px;
     height: 3px;
     border-radius: 6px;
     background-color: $main-color;

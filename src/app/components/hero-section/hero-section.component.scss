@@ -12,9 +12,15 @@
     }
   }
   .hero-description {
-    margin: 20px auto;
+    margin: 20px 0;
     font-size: 1rem;
     max-width: 500px;
+  }
+
+  @media (max-width: 991.98px) {
+    .hero-description {
+      margin: 20px auto;
+    }
   }
   .custom-btn {
     background-color: $main-color;

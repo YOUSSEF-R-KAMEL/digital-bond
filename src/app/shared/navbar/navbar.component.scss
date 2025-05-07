@@ -3,23 +3,25 @@
 nav {
   // desktop menu
   .desktop {
-    li {
-      display: inline-block;
-      margin-right: 1.5rem;
-      a {
-        transition: .2s;
-        font-size: 1.1rem;
-        &:hover,
-        &.active {
-          color: $main-color;
-        }
+    a {
+      transition: .2s;
+      font-size: 1.1rem;
+      &:hover {
+        color: $main-color;
+      }
+      li {
+        display: inline-block;
+        margin-right: 1.5rem;
       }
     }
   }
-  .contact-btn button {
+  .contact-btn a {
     width: 157px;
     height: 44px;
+    text-align: center;
+    line-height: 44px;
     background: none;
+    display: inline-block;
     border: 1px solid #fff;
     color: #fff;
     border-radius: 6px;
@@ -27,13 +29,12 @@ nav {
     font-weight: 600;
     &:hover  {
       background-color: #fff;
-      a {
-        color: #000;
-      }
+      color: #000;
     }
   }
 }
 
+// mobile menu
 .mobile-container {
   display: none;
 }

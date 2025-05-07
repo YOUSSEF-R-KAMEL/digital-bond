@@ -15,25 +15,27 @@
             class="dropdown-menu d-flex flex-column position-absolute rounded"
             [class.show]="isMenuOpen">
             @for (item of menuList; track $index) {
-              <a [href]="item.link" (click)="closeMenu()">
+              <a [href]="'#' + item.link" (click)="closeMenu()">
                 <li>
                   <i class="fas me-2" [class]="item.icon"></i> {{item.text}}
                 </li>
               </a>
             }
-
           </ul>
         </div>
       </div>
       <!-- desktop  -->
         <ul class="desktop m-0">
-          <li><a class="active" href="#home">Home</a></li>
-          <li><a href="#about-us">About us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#reviews">Reviews</a></li>
+          @for (item of menuList.slice(0, menuList.length - 1); track $index) {
+            <a [href]="'#' + item.link" (click)="closeMenu()">
+              <li>
+                {{item.text}}
+              </li>
+            </a>
+          }
         </ul>
         <div class="contact-btn">
-          <button><a href="#contact-us">Contact us</a></button>
+          <a href="#contact-us">Contact us</a>
         </div>
     </div>
   </div>
